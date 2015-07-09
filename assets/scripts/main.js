@@ -54,6 +54,18 @@
     $menu.toggleClass(active);
   });
 
+  // Adds class of 'last-word' of main-heading
+  $('.main-heading').each(function(index, element) {
+    var heading = $(element);
+    var word_array, last_word, first_part;
+
+    word_array = heading.html().split(/\s+/); // split on spaces
+    last_word = word_array.pop();             // pop the last word
+    first_part = word_array.join(' ');        // rejoin the first words together
+
+    heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
+  });
+
   // The routing fires all common scripts, followed by the page specific scripts.
   // Add additional events for more control over timing e.g. a finalize event
   var UTIL = {
