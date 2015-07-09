@@ -8,3 +8,16 @@
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
 }
+
+.col-1-2 {
+  @include make-sm-column($main-sm-columns/2);
+}
+.banners {
+  padding-top: 119px;
+
+  @media (max-width: $screen-sm-min) {
+    padding-top: 83px;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+  }
+}
