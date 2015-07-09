@@ -1,0 +1,17 @@
+/**
+ * Heading
+ */
+
+.heading {
+  color: $heading-color;
+  font-family: $font-face-montserrat;
+  text-transform: uppercase;
+
+  &.main-heading {
+    margin: 55px 0;
+
+    .last-word {
+      font-weight: 700;
+    }
+  }
+}
