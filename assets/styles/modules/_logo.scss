@@ -1,0 +1,40 @@
+/**
+ * Logo
+ */
+
+.logo {
+  background-repeat: no-repeat;
+
+  &.main-logo {
+    @media (max-width: $screen-sm-min) {
+      width: 130px;
+      height: 58px;
+      margin: 10px 0 10px 10px;
+    }
+    display: inline-block;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+
+    margin: 10px 0;
+    background-image: url('../images/novo-construction-logo.png');
+    background-size: 100%;
+    width: 210px;
+    height: 94px;
+  }
+}
+
+.logo-container {
+  @media (max-width: $screen-sm-min) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 102;
+    background-color: $novo-blue;
+    transform: translate3d(0,0,0);
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+  }
+  @media (min-width: $screen-sm-min) {
+    float: left;
+  }
+}
