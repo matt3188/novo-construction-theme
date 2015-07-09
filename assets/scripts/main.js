@@ -44,6 +44,10 @@
     slides: 'li',
   });
 
+  var $menuTrigger = $('#main-menu-trigger'),
+    $menu = $('.main-navigation'),
+    active = 'on-screen';
+
   // The routing fires all common scripts, followed by the page specific scripts.
   // Add additional events for more control over timing e.g. a finalize event
   var UTIL = {
