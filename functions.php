@@ -28,3 +28,6 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+// Switch off admin bar on the frontend
+show_admin_bar( false );
