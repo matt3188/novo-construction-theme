@@ -1,0 +1,20 @@
+/**
+ * Header
+ */
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: $novo-blue;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+.page-header {
+  text-align: center;
+  color: $body-text-color;
+  border: 0;
+
+  p {
+    font-size: 17px;
+  }
+}
