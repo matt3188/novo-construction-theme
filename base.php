@@ -18,8 +18,15 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
+
+    <!-- Home page Banners -->
+    <?php if(is_front_page()): ?>
+      <?php get_template_part('templates/banners'); ?>
+    <?php endif; ?>
+
     <div class="wrap container" role="document">
       <div class="content row">
+
         <main class="main" role="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
