@@ -22,6 +22,9 @@
     },
     "modernizr.js": {
       "bower": ["modernizr"]
+    },
+    "jquery.cycle2.js": {
+      "bower": ["jquery-cycle2"]
     }
   },
   "config": {
