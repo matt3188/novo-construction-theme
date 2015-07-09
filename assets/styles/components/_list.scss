@@ -1,0 +1,20 @@
+.list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+  }
+  a {
+    display: block;
+  }
+
+  &.horizontal-list {
+    li {
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+      }
+    }
+  }
+
+}
