@@ -57,7 +57,7 @@
     }
 
     &.on-screen {
-      transform: translate3d(0,35%,0);
+      transform: translate3d(0,83px,0);
     }
   }
 }
@@ -67,7 +67,7 @@
   top: 30px;
   right: 30px;
   width: 30px;
-  height: 14px;
+  height: 24px;
 
   @media (min-width: $screen-sm-min) {
     display: none;
