@@ -24,6 +24,24 @@ use Roots\Sage\Wrapper;
       <?php get_template_part('templates/banners'); ?>
     <?php endif; ?>
 
+    <?php
+    /** Get a custom field with multiple values and return as an array */
+    $checkboxes = get_field('type');
+    if(($checkboxes ) === 'Standard') { ?>
+    <section class="page-header standard">
+    <?php } else if(($checkboxes ) === 'Fancy') { ?>
+    <section class="page-header fancy">
+    <?php } ?>
+      <div class="wrap container" role="document">
+        <?php
+          $header = get_field('header_heading');
+          $header_intro = get_field('header_intro');
+        ?>
+        <h1 class="heading main-heading"><?php echo $header; ?></h1>
+        <p><?php echo $header_intro; ?></p>
+      </div>
+    </section>
+
     <div class="wrap container" role="document">
       <div class="content row">
 
