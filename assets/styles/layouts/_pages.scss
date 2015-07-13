@@ -18,6 +18,15 @@
     padding-top: 119px;
   }
 
+  &.fancy {
+    background-color: #f9f9f9;
+    text-align: center;
+
+    .wrap {
+      text-align: left;
+    }
+  }
+
   .wrap {
     margin: 55px auto 20px;
   }
