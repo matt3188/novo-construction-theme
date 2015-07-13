@@ -11,15 +11,9 @@
     </a>
 
     <nav class="navigation main-navigation" role="navigation">
-      <ul class="list horizontal-list">
-        <li><a href="" class="active">Home</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
       <?php
       if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => false, 'menu_class' => 'list horizontal-list']);
       endif;
       ?>
     </nav>
