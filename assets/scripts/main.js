@@ -58,7 +58,7 @@
   });
 
   // Adds class of 'last-word' of main-heading
-  $('.main-heading').each(function(index, element) {
+  $('.page-header.standard .main-heading').each(function(index, element) {
     var heading = $(element);
     var word_array, last_word, first_part;
 
