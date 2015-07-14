@@ -12,10 +12,14 @@ the_post(); ?>
       $description = get_sub_field('service_description');
       $link = get_sub_field('service_link');
     ?>
-    <div class="service-block">
-      <?php echo $heading; ?>
-      <?php echo $description; ?>
-      <a href="<?php echo $link; ?>">Find out more</a>
+    <div class="col-sm-4">
+      <div class="service service-block">
+        <h4 class="heading sub-heading"><?php echo $heading; ?></h4>
+        <div class="service-content">
+          <?php echo $description; ?>
+          <a class="btn btn-find-more" href="<?php echo $link; ?>">Find out more</a>
+        </div>
+      </div>
     </div>
   <?php endwhile; ?>
 <?php endif; ?>
