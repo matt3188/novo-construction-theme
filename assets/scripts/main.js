@@ -40,10 +40,13 @@
       }
     }
   };
+
+  // Home page slideshow
   $('.cycle-slideshow').cycle({
     slides: 'li',
   });
 
+  // Mobile menu trigger
   var $menuTrigger = $('#main-menu-trigger'),
     $menu = $('.main-navigation'),
     active = 'on-screen';
