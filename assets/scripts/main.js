@@ -49,12 +49,12 @@
   // Mobile menu trigger
   var $menuTrigger = $('#main-menu-trigger'),
     $menu = $('.main-navigation'),
-    active = 'on-screen';
+    activeClass = 'on-screen';
 
   $menuTrigger.on('click', function(e) {
     $(this).toggleClass('is-active');
     e.preventDefault();
-    $menu.toggleClass(active);
+    $menu.toggleClass(activeClass);
   });
 
   // Adds class of 'last-word' of main-heading
