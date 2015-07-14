@@ -1,16 +1,10 @@
 <footer id="footer" class="content-info" role="contentinfo">
-  <div class="container">
+  <div class="container widget-container">
     <div class="row">
-      <div class="col-sm-3">
-        <p>Left</p>
-      </div>
-      <div class="col-sm-6">
-        <p>Middle</p>
-      </div>
-      <div class="col-sm-3">
-        <p>Right</p>
-      </div>
+      <?php dynamic_sidebar('sidebar-footer'); ?>
     </div>
-    <?php //dynamic_sidebar('sidebar-footer'); ?>
+  </div>
+  <div class="container dark-blue">
+    <p>&copy; <?php bloginfo('name'); ?> All rights reserved.</p>
   </div>
 </footer>

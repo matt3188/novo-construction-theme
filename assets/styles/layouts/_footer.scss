@@ -5,4 +5,15 @@
 #footer {
   color: rgba(#FFF, 0.8);
   background-color: $novo-blue;
+
+  .widget-container {
+    padding: 50px 0;
+  }
+  .widget {
+    @extend .col-sm-3;
+
+    &:nth-child(2) {
+      @extend .col-sm-6;
+    }
+  }
 }
