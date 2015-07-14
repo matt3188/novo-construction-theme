@@ -9,3 +9,48 @@
   background-color: $novo-blue;
   box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
+
+.page-header {
+  text-align: center;
+  color: $body-text-color;
+  border: 0;
+  margin: 0;
+  padding-top: 83px;
+  @media (min-width: $screen-sm-min) {
+    padding-top: 119px;
+  }
+
+  &.fancy {
+    color: $header-text-grey;
+    background-color: #f9f9f9;
+    text-align: center;
+
+    p {
+      font-size: 20px;
+    }
+
+    .wrap {
+      text-align: left;
+    }
+
+    .main-heading {
+      color: $novo-turquoise;
+      font-weight: 300;
+      text-transform: inherit;
+      font-size: 50px;
+      font-family: $font-face-open-sans;
+    }
+  }
+
+  .wrap {
+    margin: 55px auto 20px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+}
+
+.banners + .page-header {
+  padding-top: 0;
+}
