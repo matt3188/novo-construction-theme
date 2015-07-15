@@ -34,6 +34,12 @@
       @media (min-width: $screen-sm-min) {
         float: left;
       }
+      &.current-menu-item {
+        a {
+          color: $novo-turquoise;
+          text-decoration: none;
+        }
+      }
     }
     a {
       color: #FFF;
