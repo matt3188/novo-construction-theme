@@ -1,4 +1,16 @@
 
+
 body {
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
+a {
+
+  &:hover {
+    color: $brand-primary !important;
+    text-decoration: none;
+  }
+}
+
+@include fontface('fontAwesome', $icon-font-path, 'fontawesome-webfont');
