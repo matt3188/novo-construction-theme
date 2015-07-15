@@ -7,13 +7,35 @@
   background-color: $novo-blue;
 
   .widget-container {
-    padding: 50px 0;
+    padding: 50px 25px;
+    @media (min-width: $screen-sm-min) {
+      padding: 50px 0;
+    }
   }
   .widget {
     @extend .col-sm-3;
+    margin-bottom: 40px;
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 0;
+    }
 
     &:nth-child(2) {
       @extend .col-sm-6;
     }
   }
+
+  .dark-blue {
+    // background-color: #18143b;
+    background-color: darken($novo-blue, 7%);
+    padding: 20px 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+.sfsi_widget {
+  min-height: 50px;
+  max-height: 50px;
+  height: 50px!important;
 }
