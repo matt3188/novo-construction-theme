@@ -1,0 +1,51 @@
+/**
+ * Form
+ */
+
+.form {
+  &.stacked-form {
+    label {
+      display: block;
+      vertical-align: middle;
+      margin: 0 10px 0 0;
+      color: $header-text-grey;
+    }
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=url],
+    input[type=date],
+    input[type=month],
+    input[type=time],
+    input[type=datetime],
+    input[type=datetime-local],
+    input[type=week],
+    input[type=number],
+    input[type=search],
+    input[type=tel],
+    input[type=color],
+    textarea {
+      margin: 5px 0 0;
+      padding: 10px 12px;
+      width: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      border: 1px solid #ebebeb;
+      outline: 0;
+      border-radius: 2px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .required {
+      label {
+        &:after {
+          content: '(required)';
+          padding-left: 5px;
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+}

@@ -31,3 +31,11 @@ unset($file, $filepath);
 
 // Switch off admin bar on the frontend
 show_admin_bar( false );
+
+// Add class to Contact 7 Form
+add_filter( 'wpcf7_form_class_attr', 'your_custom_form_class_attr' );
+
+function your_custom_form_class_attr( $class ) {
+  $class .= ' form stacked-form';
+  return $class;
+}
