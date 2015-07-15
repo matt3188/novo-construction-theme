@@ -1,0 +1,80 @@
+/**
+ * Footer widgets
+ */
+
+.widget {
+
+  h3 {
+    @extend .heading;
+    font-size: 13px;
+    color: #FFF;
+    font-weight: 700;
+  }
+
+  &.widget_recent_entries {
+    padding: 0 50px;
+
+    ul {
+      @extend .list;
+    }
+    li {
+      border-bottom: 1px solid #FFF;
+      a {
+        padding: 10px 0;
+        color: #FFF;
+        outline: 0;
+        position: relative;
+
+        &:after {
+          content: '\f105';
+          font-family: $font-face-fontAwesome;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+      }
+    }
+  }
+}
+.widget_text {
+
+  &.text-2 {
+    h3 {
+      height: 42px;
+      text-indent: -999px;
+      background-image: url('../images/novo-logo-no-text.png');
+      background-repeat: no-repeat;
+    }
+  }
+  &.text-3 {
+    .textwidget {
+      position: relative;
+      padding-left: 25px;
+
+      &:after,
+      &:before {
+        position: absolute;
+        font-family: $font-face-fontAwesome;
+        left: 0;
+      }
+
+      &:before {
+        content: '\f041';
+        top: 0;
+      }
+      &:after {
+        content: '\f095';
+        top: 85px;
+      }
+      p {
+        &:before {
+          content: '\f0e0';
+          font-family: $font-face-fontAwesome;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
