@@ -29,6 +29,11 @@
     background-color: darken($novo-blue, 7%);
     padding: 20px 0;
 
+    @media (max-width: $screen-sm-min) {
+      text-align: center;
+    }
+
+
     p {
       margin: 0;
     }
