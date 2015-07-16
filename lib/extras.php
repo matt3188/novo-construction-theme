@@ -40,10 +40,8 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 show_admin_bar( false );
 
 // Add class to Contact 7 Form
-add_filter( 'wpcf7_form_class_attr', 'your_custom_form_class_attr' );
-
 function your_custom_form_class_attr( $class ) {
   $class .= ' form stacked-form';
   return $class;
 }
-
+add_filter( 'wpcf7_form_class_attr', __NAMESPACE__ . '\\your_custom_form_class_attr' );
