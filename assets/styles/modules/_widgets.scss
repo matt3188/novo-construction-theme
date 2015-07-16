@@ -12,7 +12,11 @@
   }
 
   &.widget_recent_entries {
-    padding: 0 50px;
+    @media (min-width: $screen-md-min) {
+      padding-left: 50px!important;
+      padding-right: 50px!important;
+    }
+
 
     ul {
       @extend .list;
