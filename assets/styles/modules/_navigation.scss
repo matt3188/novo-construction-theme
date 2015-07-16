@@ -69,6 +69,9 @@
 
   &.social-navigation {
 
+    li {
+      display: inline-block;
+    }
     a {
       font-size: 20px;
       color: $body-text-color;
@@ -87,14 +90,11 @@
           float: inherit;
           margin-top: 10px;
         }
+        a {
+          color: rgba(#FFF, 0.8);
+        }
       }
 
-      li {
-        display: inline-block;
-      }
-      a {
-        color: rgba(#FFF, 0.8);
-      }
     }
   }
 }
