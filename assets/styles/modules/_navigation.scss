@@ -69,20 +69,9 @@
 
   &.social-navigation {
 
-    ul {
-      float: right;
-      @media (max-width: $screen-sm-min) {
-        float: inherit;
-        margin-top: 10px;
-      }
-    }
-
-    li {
-      display: inline-block;
-    }
     a {
       font-size: 20px;
-      color: rgba(#FFF, 0.8);
+      color: $body-text-color;
       padding: 0 12px;
       font-family: $font-face-fontAwesome;
     }
@@ -91,6 +80,22 @@
       display: none;
     }
 
+    #footer & {
+      ul {
+        float: right;
+        @media (max-width: $screen-sm-min) {
+          float: inherit;
+          margin-top: 10px;
+        }
+      }
+
+      li {
+        display: inline-block;
+      }
+      a {
+        color: rgba(#FFF, 0.8);
+      }
+    }
   }
 }
 
