@@ -11,7 +11,13 @@
           <p>&copy; <?php bloginfo('name'); ?> All rights reserved.</p>
         </div>
         <div class="col-sm-6">
-          <?php echo display_ultimate_social_icons();?>
+          <nav class="navigation main-navigation" role="navigation">
+            <?php
+            if (has_nav_menu('social_navigation')) :
+              wp_nav_menu(['theme_location' => 'social_navigation', 'container' => false, 'menu_class' => 'list horizontal-list']);
+            endif;
+            ?>
+          </nav>
         </div>
       </div>
     </div>
