@@ -26,9 +26,9 @@
     "jquery.cycle2.js": {
       "bower": ["jquery-cycle2"]
     },
-    // "isotope.pkgd.min.js": {
-    //   "bower": ["isotope"]
-    // }
+    "isotope.pkgd.min.js": {
+      "bower": ["isotope"]
+    }
   },
   "config": {
     "devUrl": "http://novo-construction/"
