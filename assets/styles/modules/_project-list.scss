@@ -28,6 +28,7 @@
       bottom: 0;
       right: 0;
       margin: auto;
+      transform: translate3d(0,-160px,0);
       color: $novo-turquoise;
       background-color: #FFF;
       font-size: 1.7em;
@@ -35,6 +36,7 @@
       height: 66px;
       border-radius: 50%;
       display: table;
+      transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       &:before {
         display: table-cell;
         vertical-align: middle;
@@ -45,6 +47,9 @@
   &:hover {
     .thumb-overlay {
       opacity: 1;
+      i {
+        transform: translate3d(0,0,0);
+      }
     }
   }
 }
