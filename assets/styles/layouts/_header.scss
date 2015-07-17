@@ -16,12 +16,21 @@
   border: 0;
   margin: 0;
   padding-top: 83px;
+
   @media (min-width: $screen-sm-min) {
     padding-top: 119px;
   }
 
+  .wrap {
+    margin: 55px auto 20px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
   &.fancy {
-    color: $header-text-grey;
+    color: $body-text-color;
     background-color: #f9f9f9;
     text-align: center;
 
@@ -42,13 +51,15 @@
     }
   }
 
-  .wrap {
-    margin: 55px auto 20px;
+  &.slim {
+    color: $header-text-grey;
+    background-color: #f9f9f9;
+
+    .wrap {
+      margin: 10px auto 10px;
+    }
   }
 
-  p {
-    font-size: 17px;
-  }
 }
 
 .banners + .page-header {
