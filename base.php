@@ -29,16 +29,33 @@ use Roots\Sage\Wrapper;
     $header = get_field('header_heading');
     $header_intro = get_field('header_intro');
     $checkboxes = get_field('type');
-    if(($checkboxes ) === 'Standard') { ?>
-    <section class="page-header standard">
+    ?>
+
+    <!-- Header options  -->
+    <?php if(is_page( 'projects' ) ): ?>
+      <section class="page-header slim">
+        <div class="wrap container" role="document">
+          <h3 class="heading page-heading"><?php bloginfo('name'); ?> - <?php the_title(); ?></h3>
+        </div>
+      </section>
+    <?php endif; ?>
+
+    <?php if(($checkboxes ) === 'Standard') { ?>
+      <section class="page-header standard">
+        <div class="wrap container" role="document">
+          <h1 class="heading main-heading"><?php echo $header; ?></h1>
+          <p><?php echo $header_intro; ?></p>
+        </div>
+      </section>
     <?php } else if(($checkboxes ) === 'Fancy') { ?>
-    <section class="page-header fancy">
+      <section class="page-header fancy">
+        <div class="wrap container" role="document">
+          <h1 class="heading main-heading"><?php echo $header; ?></h1>
+          <p><?php echo $header_intro; ?></p>
+        </div>
+      </section>
     <?php } ?>
-      <div class="wrap container" role="document">
-        <h1 class="heading main-heading"><?php echo $header; ?></h1>
-        <p><?php echo $header_intro; ?></p>
-      </div>
-    </section>
+
 
     <div class="wrap container" role="document">
       <div class="content row">
