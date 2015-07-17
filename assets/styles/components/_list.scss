@@ -16,5 +16,26 @@
       }
     }
   }
+  &.category-list {
+    padding: 25px 15px;
+
+    .category {
+      border: 0;
+      background-color: transparent;
+      position: relative;
+      outline: 0;
+      &:after {
+        content: '/';
+        position: absolute;
+        left: 100%;
+      }
+      &.is-active {
+        color: $novo-turquoise;
+        &:after {
+          color: $body-text-color;
+        }
+      }
+    }
+  }
 
 }
