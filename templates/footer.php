@@ -23,3 +23,5 @@
     </div>
   </div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.min.js"></script>
