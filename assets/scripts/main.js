@@ -69,6 +69,19 @@
     heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
   });
 
+  var $container = $('.isotope').isotope({
+    // options...
+    itemSelector: '.isotope-item'
+  });
+  $('.category-list').on( 'click', 'button', function() {
+    var filterValue = $(this).data('filter');
+    $('.category-list button').removeClass('is-active');
+    if(!$(this).hasClass('is-active')) {
+      $(this).addClass('is-active');
+    }
+    $container.isotope({ filter: filterValue });
+  });
+
   // The routing fires all common scripts, followed by the page specific scripts.
   // Add additional events for more control over timing e.g. a finalize event
   var UTIL = {
