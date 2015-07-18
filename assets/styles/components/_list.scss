@@ -37,5 +37,25 @@
       }
     }
   }
+  &.project-detail-list {
+    background-color: #f9f9f9;
+    padding: 20px 25px;
+
+    dt {
+      float: left;
+      width: 20%;
+      padding: 10px 0;
+    }
+    dd {
+      padding: 10px 0 10px 0;
+      border-bottom: 1px solid #f2f2f2;
+      &.last {
+        border-bottom: 0;
+      }
+    }
+    a {
+      display: inline-block;
+    }
+  }
 
 }
