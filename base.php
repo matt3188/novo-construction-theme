@@ -40,6 +40,14 @@ use Roots\Sage\Wrapper;
       </section>
     <?php endif; ?>
 
+    <?php if(is_page_template( 'templates/project-detail.php' ) ): ?>
+      <section class="page-header slim">
+        <div class="wrap container" role="document">
+          <h3 class="heading page-heading"><?php the_title(); ?></h3>
+        </div>
+      </section>
+    <?php endif; ?>
+
     <?php if(($checkboxes ) === 'Standard') { ?>
       <section class="page-header standard">
         <div class="wrap container" role="document">

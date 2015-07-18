@@ -45,6 +45,14 @@
   $('.cycle-slideshow').cycle({
     slides: 'li',
   });
+  // Gallery
+  $('.cycle-slideshow-gallery').cycle({
+    slides: 'li',
+    next: '.next',
+    prev: '.prev',
+    fx: 'scrollHorz',
+    paused: true
+  });
 
   // Mobile menu trigger
   var $menuTrigger = $('#main-menu-trigger'),
@@ -70,7 +78,6 @@
   });
 
   var $container = $('.isotope').isotope({
-    // options...
     itemSelector: '.isotope-item'
   });
   $('.category-list').on( 'click', 'button', function() {
@@ -83,7 +90,6 @@
   });
 
   $('.masonry').masonry({
-    // options...
     itemSelector: '.masonry-item',
     isOriginLeft: false
   });
