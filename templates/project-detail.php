@@ -9,7 +9,7 @@ the_post(); ?>
   $info = get_field('project_information');
   $client = get_field('client');
   $tags = get_field('project_tags');
-  $completed = get_field('date_completed');
+  $date = DateTime::createFromFormat('Ymd', get_field('date_completed'));
   $link = get_field('url');
 ?>
 
@@ -40,7 +40,7 @@ the_post(); ?>
         <dt>Tags</dt>
           <dd><?php echo $tags ;?></dd>
         <dt>Date</dt>
-          <dd><?php echo $completed ;?></dd>
+          <dd><?php echo $date->format('F d, Y'); ;?></dd>
         <dt>URL</dt>
           <dd class="last"><a href="<?php echo $link ;?>"><?php echo $link ;?></a></dd>
       </dl>
