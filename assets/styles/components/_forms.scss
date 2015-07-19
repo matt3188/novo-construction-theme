@@ -3,7 +3,10 @@
  */
 
 .form {
+
   &.stacked-form {
+    margin-top: 50px;
+
     label {
       display: block;
       vertical-align: middle;
@@ -45,6 +48,12 @@
           display: inline-block;
         }
       }
+    }
+
+    input[type="submit"] {
+      @extend .btn;
+      @extend .btn-find-more;
+      margin-top: 0;
     }
 
   }
