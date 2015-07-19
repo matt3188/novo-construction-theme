@@ -58,3 +58,22 @@
 
   }
 }
+
+/**
+ * Validation
+ */
+.wpcf7-response-output {
+  margin: 2em 0 1em !important;
+  padding: 0.6em 1em;
+
+  &.wpcf7-validation-errors {
+    @extend .bg-warning;
+    color: #9F6000;
+    border: 1px solid #FEEFB3;
+  }
+  &.wpcf7-mail-sent-ok {
+    @extend .bg-success;
+    color: #4F8A10;
+    border: 1px solid #398f14;
+  }
+}
