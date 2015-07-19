@@ -15,7 +15,7 @@ the_post(); ?>
     ?>
     <div class="col-sm-4 masonry-item">
       <div class="service service-block">
-        <h4 class="heading sub-heading"><?php echo $heading; ?></h4>
+        <h2 class="heading sub-heading"><?php echo $heading; ?></h2>
         <div class="service-content">
           <?php echo $description; ?>
           <a class="btn btn-find-more" href="<?php echo $link; ?>">Find out more</a>
