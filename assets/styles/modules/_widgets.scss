@@ -17,14 +17,13 @@
       padding-right: 50px!important;
     }
 
-
     ul {
       @extend .list;
     }
     li {
       border-bottom: 1px solid #FFF;
       a {
-        padding: 10px 0;
+        padding: 10px 20px 10px 0;
         color: #FFF;
         outline: 0;
         position: relative;
@@ -33,8 +32,11 @@
           content: '\f105';
           font-family: $font-face-fontAwesome;
           position: absolute;
-          top: 10px;
+          top: 0;
+          bottom: 0;
           right: 10px;
+          margin: auto;
+          height: 20px;
         }
       }
     }
