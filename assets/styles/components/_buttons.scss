@@ -16,7 +16,8 @@
     background-color: $body-text-color;
     transition: 0.3s;
     &:hover {
-      color: #FFF;
+      // TODO figure out why important is needed
+      color: #FFF !important;
       background-color: darken($body-text-color, 40%);
     }
   }
