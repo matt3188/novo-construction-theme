@@ -6,20 +6,21 @@
   background-repeat: no-repeat;
 
   &.main-logo {
-    @media (max-width: $screen-sm-min) {
-      width: 130px;
-      height: 58px;
-      margin: 10px 0 10px 10px;
-    }
     display: inline-block;
-    transition: 0.5s;
-    transition-delay: 0.2s;
+    width: 130px;
+    height: 58px;
+    margin: 10px 0 10px 10px;
 
-    margin: 10px 0;
     background-image: url('../images/novo-construction-logo.png');
     background-size: 100%;
-    width: 210px;
-    height: 94px;
+
+    @media (min-width: $screen-sm-min) {
+      transition: 0.5s;
+      margin: 10px 0;
+      width: 210px;
+      height: 94px;
+    }
+
   }
 }
 
