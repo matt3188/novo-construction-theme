@@ -16,8 +16,14 @@
   }
 
   &.sub-heading {
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     margin-bottom: 30px;
+
+    &.grey {
+      color: $body-text-color;
+      margin-bottom: 0;
+    }
   }
 
   &.text-heading {
@@ -28,5 +34,11 @@
     text-align: left;
     text-transform: none;
     font-weight: normal;
+  }
+  &.special-heading {
+    margin-top: 0;
+    font-size: 52px;
+    font-weight: 700;
+    color: $novo-turquoise;
   }
 }
