@@ -30,7 +30,9 @@
     }
 
     li {
+      position: relative;
       text-align: center;
+      background-color: $novo-blue;
       @media (min-width: $screen-sm-min) {
         float: left;
       }
@@ -38,6 +40,14 @@
         a {
           color: $novo-turquoise;
           text-decoration: none;
+        }
+      }
+      &:hover {
+        ul {
+          transform: translate3d(0,0,0);
+          a {
+            color: #FFF;
+          }
         }
       }
     }
@@ -64,6 +74,31 @@
         .slimmer & {
           padding: 38px 15px;
           transition: 0.5s;
+        }
+      }
+    }
+
+    .sub-menu {
+      @media (max-width: $screen-sm-min) {
+        opacity: 0;
+      }
+      @media (min-width: $screen-sm-min) {
+        position: absolute;
+        left: 0;
+        padding: 0;
+        transform: translate3d(0,-100%,0);
+        transition: 0.5s;
+        width: 200%;
+        z-index: -1;
+        li {
+          width: 100%;
+          background-color: $novo-blue;
+        }
+        a {
+          text-align: left;
+          width: 100%;
+          padding: 20px;
+          border-bottom: 1px solid rgba(#FFF, 0.2);
         }
       }
     }
@@ -110,6 +145,7 @@
         margin-right: 3px;
         background-color: $novo-light-grey;
         border-radius: 3px;
+        margin-bottom: 7px;
         a {
           padding: 19px 22px;
           min-width: 68px;
