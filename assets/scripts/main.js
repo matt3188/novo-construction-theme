@@ -41,6 +41,18 @@
     }
   };
 
+  // Header
+  var header = $(".header");
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 500) {
+      header.addClass("slimmer");
+    } else {
+      header.removeClass("slimmer");
+    }
+  });
+
   // Home page slideshow
   $('.cycle-slideshow').cycle({
     slides: 'li',

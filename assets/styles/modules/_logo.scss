@@ -21,6 +21,12 @@
       height: 94px;
     }
 
+    .slimmer & {
+      @media (min-width: $screen-sm-min) {
+        height: 70px;
+        width: 160px;
+      }
+    }
   }
 }
 
