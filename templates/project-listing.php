@@ -8,6 +8,7 @@ the_post(); ?>
   $heading = get_field('heading');
   $intro = get_field('intro');
 ?>
+
 <h4 class="heading sub-heading"><?php echo $heading; ?></h4>
 <?php echo $intro; ?>
 
