@@ -24,6 +24,10 @@ use Roots\Sage\Wrapper;
       <?php get_template_part('templates/banners'); ?>
     <?php endif; ?>
 
+    <?php if(is_page_template( 'templates/contact.php' ) ): ?>
+      <div id="map"></div>
+    <?php endif; ?>
+
     <?php
     /** Get a custom field with multiple values and return as an array */
     $header = get_field('header_heading');
