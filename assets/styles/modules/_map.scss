@@ -7,6 +7,10 @@
   width: 100%;
 
   .gm-style {
-    margin-top: $header-height;
+    margin-top: 82px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: $header-height;
+    }
   }
 }
