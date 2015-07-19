@@ -18,7 +18,7 @@
   padding-top: 83px;
 
   @media (min-width: $screen-sm-min) {
-    padding-top: 119px;
+    padding-top: $header-height;
   }
 
   .wrap {
