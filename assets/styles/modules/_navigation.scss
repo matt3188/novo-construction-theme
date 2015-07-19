@@ -96,6 +96,24 @@
       }
 
     }
+    &.large-icons {
+      margin: 30px 0 50px;
+
+      li {
+        margin-right: 3px;
+        background-color: $novo-light-grey;
+        border-radius: 3px;
+        a {
+          padding: 19px 22px;
+          min-width: 68px;
+          min-height: 68px;
+          text-align: center;
+        }
+        i {
+          margin: 0;
+        }
+      }
+    }
   }
 }
 
