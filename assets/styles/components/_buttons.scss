@@ -16,6 +16,7 @@
     background-color: $body-text-color;
     transition: 0.3s;
     &:hover {
+      color: #FFF;
       background-color: darken($body-text-color, 40%);
     }
   }
