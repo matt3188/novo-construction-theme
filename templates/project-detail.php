@@ -11,6 +11,9 @@ the_post(); ?>
   $tags = get_field('project_tags');
   $date = DateTime::createFromFormat('Ymd', get_field('date_completed'));
   $link = get_field('url');
+
+  $data = str_replace(array("\r", "\n"), ',', $tags);
+  $tags = array_filter(explode(',', $data));
 ?>
 
 <div class="project project-gallery">
@@ -38,7 +41,11 @@ the_post(); ?>
         <dt>Client</dt>
           <dd><?php echo $client ;?></dd>
         <dt>Tags</dt>
-          <dd><?php echo $tags ;?></dd>
+          <dd class="tag-list">
+            <?php foreach($tags as $key => $tag) { ?>
+              <span class="tag"><?php echo $tag ;?></span>
+            <?php } ?>
+          </dd>
         <dt>Date</dt>
           <dd><?php echo $date->format('F d, Y'); ;?></dd>
         <dt>URL</dt>
