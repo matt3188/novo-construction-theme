@@ -80,7 +80,7 @@
 
     .sub-menu {
       @media (max-width: $screen-sm-min) {
-        opacity: 0;
+        display: none;
       }
       @media (min-width: $screen-sm-min) {
         position: absolute;
