@@ -39,7 +39,7 @@ use Roots\Sage\Wrapper;
     <?php if(is_page( 'projects' ) ): ?>
       <section class="page-header slim">
         <div class="wrap container" role="document">
-          <h3 class="heading page-heading"><?php bloginfo('name'); ?> - <?php the_title(); ?></h3>
+          <h3 class="heading page-heading"><?php the_title(); ?></h3>
         </div>
       </section>
     <?php endif; ?>
