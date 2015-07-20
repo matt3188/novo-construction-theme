@@ -39,6 +39,7 @@
     }
     .form-group {
       margin-bottom: 20px;
+      position: relative;
     }
     .required {
       label {
@@ -55,8 +56,25 @@
       @extend .btn-find-more;
       margin-top: 0;
     }
-
   }
+  .message-subject {
+
+    select {
+      padding: 10px 12px;
+      width: 100%;
+      background: transparent;
+      border: 1px solid #ebebeb;
+      border-radius: 0;
+      appearance: none;
+    }
+    + .fa {
+     position: absolute;
+      right: 15px;
+      bottom: 14px;
+      z-index: 99;
+    }
+  }
+
 }
 
 /**
