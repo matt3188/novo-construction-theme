@@ -52,6 +52,14 @@ use Roots\Sage\Wrapper;
       </section>
     <?php endif; ?>
 
+    <?php if( is_single() ): ?>
+      <section class="page-header slim">
+        <div class="wrap container" role="document">
+          <h3 class="heading page-heading">Latest News</h3>
+        </div>
+      </section>
+    <?php endif; ?>
+
     <?php if(($checkboxes ) === 'Standard') { ?>
       <section class="page-header standard">
         <div class="wrap container" role="document">
