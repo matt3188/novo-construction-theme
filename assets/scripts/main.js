@@ -112,13 +112,13 @@
   var map;
   function init() {
     var mapOptions = {
-      center: new google.maps.LatLng(51.884372, 0.02509),
+      center: new google.maps.LatLng(51.881154, 0.025315,
       zoom: 15,
       zoomControl: false,
       disableDoubleClickZoom: true,
       mapTypeControl: false,
       scaleControl: false,
-      scrollwheel: true,
+      scrollwheel: false,
       panControl: false,
       streetViewControl: false,
       draggable: true,
@@ -259,7 +259,7 @@
         'undefined',
         'undefined',
         'undefined',
-        51.8831242, 0.0257052,
+        51.881154, 0.025315,
         'http://localhost:3000/wp-content/themes/novo-construction/dist/images/novo-pin.png'
       ]
     ];
