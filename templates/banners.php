@@ -3,6 +3,9 @@
 <section class="banners">
   <?php if (have_rows('banner')): ?>
     <div class="cycle-slideshow">
+      <button class="btn controls prev"><i class="fa fa-angle-left"></i></button>
+      <button class="btn controls next"><i class="fa fa-angle-right"></i></button>
+      <div class="pager-container"></div>
       <ul class="list">
         <?php while (have_rows('banner')): the_row(); ?>
           <?php $image = get_sub_field('image'); ?>

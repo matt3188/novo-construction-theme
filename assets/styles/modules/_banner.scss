@@ -9,5 +9,33 @@
     height: 370px;
     background-size: cover;
     background-position: 50%;
+
+    @media (min-width: $screen-sm-min) {
+      height: 600px;
+    }
+  }
+
+  .pager-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 999;
+
+    .banner-pager {
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.5);
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      margin: 20px 4px;
+      transition: background-color 0.5s;
+
+      &.cycle-pager-active {
+        background-color: #FFF;
+      }
+    }
   }
 }

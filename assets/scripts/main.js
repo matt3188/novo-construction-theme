@@ -56,6 +56,11 @@
   // Home page slideshow
   $('.cycle-slideshow').cycle({
     slides: 'li',
+    next: '.next',
+    prev: '.prev',
+    fx: 'scrollHorz',
+    pager: '> .pager-container',
+    pagerTemplate: '<span class="banner-pager"></span>'
   });
   // Gallery
   $('.cycle-slideshow-gallery').cycle({
