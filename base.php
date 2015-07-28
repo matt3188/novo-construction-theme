@@ -79,7 +79,6 @@ use Roots\Sage\Wrapper;
 
     <div class="wrap container" role="document">
       <div class="content row">
-
         <main class="main" role="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
@@ -90,6 +89,17 @@ use Roots\Sage\Wrapper;
         <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
+
+    <?php if(is_front_page()): ?>
+      <ul class="list horizontal-list clients">
+        <li><img src="wp-content/themes/novo-construction/dist/images/client-logos/CLINE-Logo.png"></li>
+        <li><img src="wp-content/themes/novo-construction/dist/images/client-logos/Chas-Logo.png"></li>
+        <li><img src="wp-content/themes/novo-construction/dist/images/client-logos/eusr_logo_2014.png"></li>
+        <li><img src="wp-content/themes/novo-construction/dist/images/client-logos/safecontractor.png"></li>
+        <li><img src="wp-content/themes/novo-construction/dist/images/client-logos/PASMAnewlogo.png"></li>
+        <li><img src="wp-content/themes/novo-construction/dist/images/client-logos/the-guild-of-master-craftsmen.png"></li>
+      </ul>
+    <?php endif; ?>
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
