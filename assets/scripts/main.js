@@ -117,7 +117,7 @@
   var map;
   function init() {
     var mapOptions = {
-      center: new google.maps.LatLng(51.881154, 0.025315,
+      center: new google.maps.LatLng(51.881154, 0.025315),
       zoom: 15,
       zoomControl: false,
       disableDoubleClickZoom: true,
