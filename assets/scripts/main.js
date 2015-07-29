@@ -265,7 +265,7 @@
         'undefined',
         'undefined',
         51.881154, 0.025315,
-        'http://localhost:3000/wp-content/themes/novo-construction/dist/images/novo-pin.png'
+        'http://staging.novoconstruction.co.uk/wp-content/themes/novo-construction/dist/images/novo-pin.png'
       ]
     ];
     for (i = 0; i < locations.length; i++) {
