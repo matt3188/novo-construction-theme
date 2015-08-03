@@ -71,6 +71,26 @@
     paused: true
   });
 
+  // Client carousel
+  $('.client-carousel').owlCarousel({
+    stageElement: 'ul',
+    itemElement: 'li',
+    loop: true,
+    nav: false,
+    responsive: {
+      0: {
+          items: 1
+      },
+      600: {
+          items: 3
+      },
+      1000: {
+          items: 5
+      }
+    }
+
+  });
+
   // Mobile menu trigger
   var $menuTrigger = $('#main-menu-trigger'),
     $menu = $('.main-navigation'),
