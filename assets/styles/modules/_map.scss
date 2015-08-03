@@ -6,6 +6,10 @@
   height: 450px + $header-height;
   width: 100%;
 
+  @media (max-width: $screen-sm-min) {
+    height: 340px + $header-height;
+  }
+
   .gm-style {
     margin-top: 82px;
 
