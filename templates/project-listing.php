@@ -48,6 +48,7 @@ the_post(); ?>
               </a>
               <h4 class="heading project-heading"><?php echo $heading; ?></h4>
               <?php echo $description; ?>
+              <a href="<?php echo $link; ?>" class="btn btn-find-more visible-xs">View Project</a>
             </div>
           </div>
         </li>
