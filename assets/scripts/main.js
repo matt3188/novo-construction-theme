@@ -42,14 +42,14 @@
   };
 
   // Header
-  var header = $(".header");
+  var header = $('.header');
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 500) {
-      header.addClass("slimmer");
+      header.addClass('slimmer');
     } else {
-      header.removeClass("slimmer");
+      header.removeClass('slimmer');
     }
   });
 
@@ -62,6 +62,7 @@
     pager: '> .pager-container',
     pagerTemplate: '<span class="banner-pager"></span>'
   });
+
   // Gallery
   $('.cycle-slideshow-gallery').cycle({
     slides: 'li',
