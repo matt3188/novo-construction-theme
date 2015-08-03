@@ -28,6 +28,9 @@
     },
     "isotope.pkgd.min.js": {
       "bower": ["isotope"]
+    },
+    "owl.carousel.js": {
+      "bower": ["OwlCarousel2"]
     }
   },
   "config": {

@@ -10,7 +10,8 @@
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.5",
     "jquery-cycle2": "~2.1.6",
-    "isotope": "~2.2.1"
+    "isotope": "~2.2.1",
+    "OwlCarousel2": "~2.0.0-beta.3"
   },
   "overrides": {
     "modernizr": {
