@@ -77,6 +77,8 @@
     itemElement: 'li',
     loop: true,
     nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
     responsive: {
       0: {
           items: 1
