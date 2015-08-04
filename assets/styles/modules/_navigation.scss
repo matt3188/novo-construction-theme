@@ -42,7 +42,8 @@
           text-decoration: none;
         }
       }
-      &:hover {
+      &:hover,
+      &:focus {
         ul {
           transform: translate3d(0,0,0);
           a {
@@ -66,7 +67,8 @@
         padding: 50px 15px;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $novo-turquoise;
         text-decoration: none;
       }
