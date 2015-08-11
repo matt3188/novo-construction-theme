@@ -49,7 +49,7 @@ the_post(); ?>
         <dt>Date</dt>
           <dd><?php echo $date->format('F d, Y'); ;?></dd>
         <dt>URL</dt>
-          <dd class="last"><a href="<?php echo $link ;?>"><?php echo $link ;?></a></dd>
+          <dd class="last"><a href="<?php echo $link ;?>"><span><?php echo $link ;?></span></a></dd>
       </dl>
     </div>
   </div>
