@@ -57,6 +57,14 @@
       @extend .btn-find-more;
       margin-top: 0;
     }
+
+    // Message sent
+    &.sent {
+      margin-bottom: 50px;
+      fieldset {
+        display: none;
+      }
+    }
   }
   .message-subject {
 
