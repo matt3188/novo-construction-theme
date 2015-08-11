@@ -11,12 +11,12 @@ the_post(); ?>
   ?>
 <div class="col-sm-6">
   <h2 class="heading sub-heading">Contact us</h2>
-  <p><?php echo $firstColumn ?></p>
+  <?php echo $firstColumn ?>
   <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form"]'); ?>
 </div>
 <div class="col-sm-6">
   <h2 class="heading sub-heading">Get in Touch</h2>
-  <p><?php echo $secondColumn ?></p>
+  <?php echo $secondColumn ?>
   <nav class="navigation social-navigation large-icons" role="navigation">
     <?php
     if (has_nav_menu('social_navigation')) :
@@ -24,6 +24,8 @@ the_post(); ?>
     endif;
     ?>
   </nav>
-  <h3 class="heading sub-heading grey">Available from 9am - 6pm</h3>
-  <h3 class="heading special-heading">01920 823 006</h3>
+  <div class="company-info">
+    <h3 class="heading sub-heading grey">Available from 9am - 6pm</h3>
+    <h3 class="heading special-heading"><a href="tel:01920 823 006">01920 823 006</a></h3>
+  </div>
 </div>
