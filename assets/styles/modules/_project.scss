@@ -23,3 +23,15 @@
   margin: 0 0 5px 5px;
   display: inline-block;
 }
+@media all and (max-width: 320px) {
+  .last {
+    a {
+      span {
+        display: none;
+      }
+      &:after {
+        content: 'Website';
+      }
+    }
+  }
+}
