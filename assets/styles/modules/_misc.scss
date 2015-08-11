@@ -1,0 +1,14 @@
+/**
+ * Misc
+ */
+
+.company-info {
+  @media (max-width: $screen-sm-min) {
+    .sub-heading {
+      font-size: 16px;
+    }
+    .special-heading {
+      font-size: 32px;
+    }
+  }
+}

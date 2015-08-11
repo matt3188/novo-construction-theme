@@ -67,3 +67,14 @@
   max-height: 50px;
   height: 50px!important;
 }
+
+@media all and (max-width: 320px) {
+  .footer-email {
+    span {
+      display: none;
+    }
+    &:after {
+      content: 'Email us';
+    }
+  }
+}
