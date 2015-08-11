@@ -29,7 +29,7 @@
     "isotope.pkgd.min.js": {
       "bower": ["isotope"]
     },
-    "owl.carousel.js": {
+    "owl.carousel.min.js": {
       "bower": ["OwlCarousel2"]
     }
   },
