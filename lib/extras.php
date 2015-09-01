@@ -45,3 +45,17 @@ function your_custom_form_class_attr( $class ) {
   return $class;
 }
 add_filter( 'wpcf7_form_class_attr', __NAMESPACE__ . '\\your_custom_form_class_attr' );
+
+/**
+ * If user isn't admin hide the themes and widgets menu
+ */
+function hide_menu() {
+  global $menu;
+  if ( wp_get_current_user()->ID != 1 ) {
+    unset($menu[25]); // Removed comments
+    remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
+    remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
+  }
+}
+
+add_action('admin_head', __NAMESPACE__ . '\\hide_menu');
