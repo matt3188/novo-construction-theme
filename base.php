@@ -61,12 +61,23 @@ use Roots\Sage\Wrapper;
     <?php endif; ?>
 
     <?php if(($checkboxes ) === 'Standard') { ?>
-      <section class="page-header standard">
-        <div class="wrap container" role="document">
-          <h1 class="heading main-heading"><?php echo $header; ?></h1>
-          <p><?php echo $header_intro; ?></p>
-        </div>
-      </section>
+
+      <?php if(!is_front_page()) { ?>
+        <section class="page-header slim">
+          <div class="wrap container" role="document">
+            <h1 class="heading page-heading"><?php echo $header; ?></h1>
+            <p><?php echo $header_intro; ?></p>
+          </div>
+        </section>
+      <?php } else if(is_front_page()) { ?>
+        <section class="page-header standard">
+          <div class="wrap container" role="document">
+            <h1 class="heading main-heading"><?php echo $header; ?></h1>
+            <p><?php echo $header_intro; ?></p>
+          </div>
+        </section>
+      <?php } ?>
+
     <?php } else if(($checkboxes ) === 'Fancy') { ?>
       <section class="page-header fancy">
         <div class="wrap container" role="document">
