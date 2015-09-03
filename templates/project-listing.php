@@ -15,14 +15,21 @@ the_post(); ?>
 <nav class="navigation isotope-navigation" role="navigation">
   <ul class="list horizontal-list category-list">
     <button class="category is-active" data-filter="*">Show all</button>
-    <?php while(have_rows('project')): the_row(); ?>
-      <?php
-        $field = get_sub_field_object('project_category');
-        $value = get_sub_field('project_category');
-        $label = $field['choices'][ $value ];
-      ?>
-      <button class="category" data-filter=".<?php echo $value ?>"><?php echo $label ?></button>
-    <?php endwhile; ?>
+    <?php
+
+      $categories = array();
+      while(have_rows('project')): the_row();
+        $categories[] = get_sub_field('project_category');
+      endwhile;
+
+      // This will strip out any values that are identical.
+      $categories = array_unique($categories);
+
+      // Run through your unique array of categories
+      foreach ( $categories as $category ) {
+        $remove = array(" ", ",","/", ".", ":", "-", "–", "—", "!", "?", ";"); ?>
+        <button class="category" data-filter=".<?php echo $category ?>"><?php echo ucfirst(str_replace($remove, " ", $category)); ?></button>
+      <?php } ?>
   </ul>
 </nav>
 
