@@ -32,6 +32,9 @@
       }
       &:hover {
         color: $novo-turquoise;
+        &:after {
+          color: $body-text-color;
+        }
       }
 
       &.is-active {
