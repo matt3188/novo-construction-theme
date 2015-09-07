@@ -3,6 +3,7 @@
  */
 
 .client-carousel {
+  position: relative;
   background-color: $novo-light-grey;
 
   .owl-stage-outer {
@@ -11,7 +12,22 @@
   }
 
   .owl-nav {
-    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 2.5em;
+    padding: 5% 20px 0;
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+    }
+    .owl-prev {
+      left: 15px;
+    }
+    .owl-next {
+      right: 15px;
+    }
   }
 
   ul {

@@ -77,9 +77,9 @@
     stageElement: 'ul',
     itemElement: 'li',
     loop: true,
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 3000,
+    nav: true,
+    navText : ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+    autoplay: false,
     responsive: {
       0: { items: 1 },
       600: { items: 3 },
