@@ -38,6 +38,12 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
+    },
+    'contact': {
+      init: function() {
+        // JavaScript to be fired on the about us page
+        google.maps.event.addDomListener(window, 'load', init);
+      }
     }
   };
 
@@ -324,7 +330,6 @@
     }
 
   }
-  google.maps.event.addDomListener(window, 'load', init);
 
   // The routing fires all common scripts,
   // followed by the page specific scripts.
