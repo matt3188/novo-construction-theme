@@ -23,7 +23,7 @@
     "modernizr.js": {
       "bower": ["modernizr"]
     },
-    "jquery.cycle2.js": {
+    "jquery.cycle2.min.js": {
       "bower": ["jquery-cycle2"]
     },
     "isotope.pkgd.min.js": {
