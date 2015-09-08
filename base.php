@@ -16,7 +16,7 @@ use Roots\Sage\Wrapper;
     <![endif]-->
     <?php
       do_action('get_header');
-      get_template_part('templates/header');
+      get_template_part('header');
     ?>
 
     <!-- Home page Banners -->
@@ -112,7 +112,7 @@ use Roots\Sage\Wrapper;
     <?php endif; ?>
     <?php
       do_action('get_footer');
-      get_template_part('templates/footer');
+      get_template_part('footer');
       wp_footer();
     ?>
   </body>
