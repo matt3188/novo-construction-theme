@@ -33,21 +33,31 @@ $tags = array_filter(explode(',', $data));
         <?php endif; ?>
       </ul>
     </div>
-    <div class="col-md-4">
-      <dl class="list vertical-list project-detail-list">
-        <dt>Client</dt>
-          <dd><?php echo $client ;?></dd>
-        <dt>Tags</dt>
-          <dd class="tag-list">
-            <?php foreach($tags as $key => $tag) { ?>
-              <span class="tag"><?php echo $tag ;?></span>
-            <?php } ?>
-          </dd>
-        <dt>Date</dt>
-          <dd><?php echo $date->format('F d, Y'); ;?></dd>
-        <dt>URL</dt>
-          <dd class="last"><a href="<?php echo $link ;?>"><span><?php echo $link ;?></span></a></dd>
-      </dl>
+  </div>
+  <div class="project-detail">
+    <h3 class="heading text-heading"><?php echo $name ;?></h3>
+    <div class="row">
+      <div class="col-md-8">
+        <?php echo $info ;?>
+      </div>
+      <div class="col-md-4">
+        <dl class="list vertical-list project-detail-list">
+          <dt>Client</dt>
+            <dd><?php echo $client ;?></dd>
+          <dt>Tags</dt>
+            <dd class="tag-list">
+              <?php foreach($tags as $key => $tag) { ?>
+                <span class="tag"><?php echo $tag ;?></span>
+              <?php } ?>
+            </dd>
+          <?php if($date) { ?>
+          <dt>Date</dt>
+            <dd><?php echo $date->format('F d, Y'); ;?></dd>
+          <?php }; ?>
+          <dt>URL</dt>
+            <dd class="last"><a href="<?php echo $link ;?>"><span><?php echo $link ;?></span></a></dd>
+        </dl>
+      </div>
     </div>
   </div>
-</div>
+<?php }; ?>
