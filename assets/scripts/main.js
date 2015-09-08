@@ -19,6 +19,62 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        // Header
+        var header = $('.header');
+        $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
+
+          if (scroll >= 500) {
+            header.addClass('slimmer');
+          } else {
+            header.removeClass('slimmer');
+          }
+        });
+
+        // Mobile menu trigger
+        var $menuTrigger = $('#main-menu-trigger'),
+          $menu = $('.main-navigation'),
+          activeClass = 'on-screen';
+
+        $menuTrigger.on('click', function(e) {
+          $(this).toggleClass('is-active');
+          e.preventDefault();
+          $menu.toggleClass(activeClass);
+        });
+
+        // Adds class of 'last-word' of main-heading
+        $('.page-header.standard .main-heading').each(function(index, element) {
+          var heading = $(element);
+          var word_array, last_word, first_part;
+
+          word_array = heading.html().split(/\s+/); // split on spaces
+          last_word = word_array.pop();             // pop the last word
+          first_part = word_array.join(' ');        // rejoin the first words together
+
+          heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
+        });
+
+        // Isotopes
+        var $container = $('.isotope').isotope({
+          itemSelector: '.isotope-item'
+        });
+
+
+        $('.category-list').on( 'click', 'button', function() {
+          var filterValue = $(this).data('filter');
+          $('.category-list button').removeClass('is-active');
+          if(!$(this).hasClass('is-active')) {
+            $(this).addClass('is-active');
+          }
+          $container.isotope({ filter: filterValue });
+        });
+
+        $('.masonry').masonry({
+          itemSelector: '.masonry-item',
+          isOriginLeft: false
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -31,12 +87,43 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+
+        // Client carousel
+        $('.client-carousel').owlCarousel({
+          stageElement: 'ul',
+          itemElement: 'li',
+          loop: true,
+          nav: true,
+          navText : ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+          autoplay: false,
+          responsive: {
+            0: { items: 1 },
+            600: { items: 3 },
+            1000: { items: 5 }
+          }
+        });
       }
     },
     // About us page, note the change from about-us to about_us.
     'about_us': {
       init: function() {
         // JavaScript to be fired on the about us page
+      }
+    },
+    'page_template_project_detail': {
+      init: function() {
+        // JavaScript to be fired on the about us page
+      },
+      finalize: function() {
+        // Gallery
+        $('.cycle-slideshow-gallery').cycle({
+          slides: 'li',
+          next: '.next',
+          prev: '.prev',
+          fx: 'scrollHorz',
+          paused: true
+        });
+
       }
     },
     'contact': {
@@ -47,91 +134,18 @@
     }
   };
 
-  // Header
-  var header = $('.header');
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 500) {
-      header.addClass('slimmer');
-    } else {
-      header.removeClass('slimmer');
-    }
-  });
-
-  // Home page slideshow
-  $('.cycle-slideshow').cycle({
-    slides: 'li',
-    next: '.next',
-    prev: '.prev',
-    fx: 'scrollHorz',
-    pager: '> .pager-container',
-    pagerTemplate: '<span class="banner-pager"></span>'
-  });
-
-  // Gallery
-  $('.cycle-slideshow-gallery').cycle({
-    slides: 'li',
-    next: '.next',
-    prev: '.prev',
-    fx: 'scrollHorz',
-    paused: true
-  });
-
-  // Client carousel
-  $('.client-carousel').owlCarousel({
-    stageElement: 'ul',
-    itemElement: 'li',
-    loop: true,
-    nav: true,
-    navText : ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-    autoplay: false,
-    responsive: {
-      0: { items: 1 },
-      600: { items: 3 },
-      1000: { items: 5 }
-    }
-  });
-
-  // Mobile menu trigger
-  var $menuTrigger = $('#main-menu-trigger'),
-    $menu = $('.main-navigation'),
-    activeClass = 'on-screen';
-
-  $menuTrigger.on('click', function(e) {
-    $(this).toggleClass('is-active');
-    e.preventDefault();
-    $menu.toggleClass(activeClass);
-  });
-
-  // Adds class of 'last-word' of main-heading
-  $('.page-header.standard .main-heading').each(function(index, element) {
-    var heading = $(element);
-    var word_array, last_word, first_part;
-
-    word_array = heading.html().split(/\s+/); // split on spaces
-    last_word = word_array.pop();             // pop the last word
-    first_part = word_array.join(' ');        // rejoin the first words together
-
-    heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
-  });
-
-  var $container = $('.isotope').isotope({
-    itemSelector: '.isotope-item'
-  });
-  $('.category-list').on( 'click', 'button', function() {
-    var filterValue = $(this).data('filter');
-    $('.category-list button').removeClass('is-active');
-    if(!$(this).hasClass('is-active')) {
-      $(this).addClass('is-active');
-    }
-    $container.isotope({ filter: filterValue });
-  });
-
-  $('.masonry').masonry({
-    itemSelector: '.masonry-item',
-    isOriginLeft: false
-  });
+  // Start cycle on home page
+  if ($("body").hasClass("home")) {
+    // Home page slideshow
+    $('.cycle-slideshow').cycle({
+      slides: 'li',
+      next: '.next',
+      prev: '.prev',
+      fx: 'scrollHorz',
+      pager: '> .pager-container',
+      pagerTemplate: '<span class="banner-pager"></span>'
+    });
+  }
 
   /**
    * Google Map
