@@ -3,17 +3,17 @@
  * Template Name: Project detail
  */
 get_header();
-the_post(); ?>
-<?php
-  $name = get_field('project_name');
-  $info = get_field('project_information');
-  $client = get_field('client');
-  $tags = get_field('project_tags');
-  $date = DateTime::createFromFormat('Ymd', get_field('date_completed'));
-  $link = get_field('url');
+the_post();
 
-  $data = str_replace(array("\r", "\n"), ',', $tags);
-  $tags = array_filter(explode(',', $data));
+$name = get_field('project_name');
+$info = get_field('project_information');
+$client = get_field('client');
+$tags = get_field('project_tags');
+$date = DateTime::createFromFormat('Ymd', get_field('date_completed'));
+$link = get_field('url');
+
+$data = str_replace(array("\r", "\n"), ',', $tags);
+$tags = array_filter(explode(',', $data));
 ?>
 
 <?php if(!$name) { ?>
