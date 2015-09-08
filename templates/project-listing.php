@@ -9,8 +9,13 @@ the_post(); ?>
   $intro = get_field('intro');
 ?>
 
-<h4 class="heading sub-heading"><?php echo $heading; ?></h4>
-<?php echo $intro; ?>
+<?php if($heading) { ?>
+  <h4 class="heading sub-heading"><?php echo $heading; ?></h4>
+<?php }; ?>
+<?php if($intro) { ?>
+  <?php echo $intro; ?>
+<?php }; ?>
+
 
 <nav class="navigation isotope-navigation" role="navigation">
   <ul class="list horizontal-list category-list">
