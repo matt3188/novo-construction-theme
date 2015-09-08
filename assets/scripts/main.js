@@ -295,11 +295,11 @@
     var map = new google.maps.Map(mapElement, mapOptions);
     var locations = [
       [
-        'NOVO Construction',
         'undefined',
         'undefined',
         'undefined',
         'undefined',
+        'NOVOConstruction',
         51.881154, 0.025315,
         'http://novoconstruction.co.uk/wp-content/themes/novo-construction/dist/images/novo-pin.png'
       ]
@@ -325,7 +325,7 @@
       } else {
         web = locations[i][4];
       }
-      if (locations[i][7] === 'undefined') {
+      if (locations[i][7] === 'NOVOConstruction') {
         markericon = '';
       } else {
         markericon = locations[i][7];
