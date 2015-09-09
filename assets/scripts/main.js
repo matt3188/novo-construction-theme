@@ -87,21 +87,6 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-
-        // Client carousel
-        $('.client-carousel').owlCarousel({
-          stageElement: 'ul',
-          itemElement: 'li',
-          loop: true,
-          nav: true,
-          navText : ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-          autoplay: false,
-          responsive: {
-            0: { items: 1 },
-            600: { items: 3 },
-            1000: { items: 5 }
-          }
-        });
       }
     },
     // About us page, note the change from about-us to about_us.

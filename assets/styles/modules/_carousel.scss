@@ -5,43 +5,12 @@
 .client-carousel {
   position: relative;
   background-color: $novo-light-grey;
-
-  .owl-stage-outer {
-    @extend .container;
-    overflow: hidden;
-  }
-
-  .owl-nav {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    font-size: 2.5em;
-    padding: 5% 20px 0;
-
-    .owl-prev,
-    .owl-next {
-      position: absolute;
-    }
-    .owl-prev {
-      left: 15px;
-    }
-    .owl-next {
-      right: 15px;
-    }
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
+  text-align: center;
 
   li {
-    text-align: center;
-    display: inline-block;
-    padding: 28px 36px;
-
-    @media (min-width: $screen-sm-min) {
-      padding: 58px 36px;
+    padding: 28px 10px;
+    @media (max-width: $screen-sm-min) {
+      display: inline-block;
     }
   }
 }

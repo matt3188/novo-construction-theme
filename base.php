@@ -101,14 +101,14 @@ use Roots\Sage\Wrapper;
     </div><!-- /.wrap -->
 
     <?php if(is_front_page()): ?>
-      <div class="client-carousel">
-        <img src="wp-content/themes/novo-construction/dist/images/client-logos/CLINE-Logo.png">
-        <img src="wp-content/themes/novo-construction/dist/images/client-logos/Chas-Logo.png">
-        <img src="wp-content/themes/novo-construction/dist/images/client-logos/eusr_logo_2014.png">
-        <img src="wp-content/themes/novo-construction/dist/images/client-logos/safecontractor.png">
-        <img src="wp-content/themes/novo-construction/dist/images/client-logos/PASMAnewlogo.png">
-        <img src="wp-content/themes/novo-construction/dist/images/client-logos/the-guild-of-master-craftsmen.png">
-      </div>
+      <ul class="list horizontal-list client-carousel">
+        <li><img src="<?php echo get_template_directory_uri(); ?>/dist/images/client-logos/CLINE-Logo.png"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/dist/images/client-logos/Chas-Logo.png"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/dist/images/client-logos/eusr_logo_2014.png"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/dist/images/client-logos/safecontractor.png"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/dist/images/client-logos/PASMAnewlogo.png"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/dist/images/client-logos/the-guild-of-master-craftsmen.png"></li>
+      </ul>
     <?php endif; ?>
     <?php
       do_action('get_footer');
