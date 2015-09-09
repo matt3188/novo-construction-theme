@@ -5,15 +5,16 @@
 get_header();
 the_post(); ?>
 
-<div class="masonry">
+<div class="isotope">
 <?php if (have_rows('service')): ?>
   <?php while (have_rows('service')): the_row(); ?>
     <?php
       $heading = get_sub_field('service_heading');
       $description = get_sub_field('service_description');
       $link = get_sub_field('service_link');
+      $order = get_sub_field('order');
     ?>
-    <div class="col-sm-4 masonry-item">
+    <div class="col-sm-4 isotope-item">
       <div class="service service-block">
         <h2 class="heading sub-heading"><?php echo $heading; ?></h2>
         <div class="service-content">
