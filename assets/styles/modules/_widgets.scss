@@ -72,6 +72,19 @@
         content: '\f095';
         top: 63px;
       }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
+        a {
+          span {
+            visibility: hidden;
+
+            &:before {
+              position: absolute;
+              visibility: visible;
+              content: 'Email us';
+            }
+          }
+        }
+      }
       p {
         &:before {
           content: '\f0e0';
