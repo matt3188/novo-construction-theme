@@ -60,7 +60,6 @@
           itemSelector: '.isotope-item'
         });
 
-
         $('.category-list').on( 'click', 'button', function() {
           var filterValue = $(this).data('filter');
           $('.category-list button').removeClass('is-active');
@@ -71,8 +70,7 @@
         });
 
         $('.masonry').masonry({
-          itemSelector: '.masonry-item',
-          isOriginLeft: false
+          itemSelector: '.masonry-item'
         });
 
       },
