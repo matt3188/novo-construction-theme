@@ -25,15 +25,19 @@
 
   .home & {
     margin-top: 0;
+
     &:before {
       border-top-color: $novo-light-grey;
     }
   }
 
   .widget-container {
-    padding: 50px 25px;
-    @media (min-width: $screen-sm-min) {
-      padding: 50px 0;
+    padding: 50px 0;
+    .container {
+      @media (max-width: $screen-sm-min) {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
   .widget {
