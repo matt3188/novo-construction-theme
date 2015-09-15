@@ -12,7 +12,7 @@
     font-weight: 700;
 
     // Mobile
-    @media (max-width: $screen-sm-min) {
+    @media (max-width: $ipad) {
       width: 100%;
 
       position: absolute;
@@ -33,7 +33,7 @@
       position: relative;
       text-align: center;
       background-color: $novo-blue;
-      @media (min-width: $screen-sm-min) {
+      @media (min-width: $ipad) {
         float: left;
       }
       &.current-menu-item {
@@ -59,7 +59,7 @@
       padding: 20px 0;
       cursor: pointer;
       border-bottom: 1px solid rgba(#FFF, 0.2);
-      @media (min-width: $screen-sm-min) {
+      @media (min-width: $ipad) {
         padding: 50px 10px;
         border: 0;
       }
@@ -72,7 +72,7 @@
         color: $novo-turquoise;
         text-decoration: none;
       }
-      @media (min-width: $screen-sm-min) {
+      @media (min-width: $ipad) {
         .slimmer & {
           padding: 38px 15px;
           transition: 0.5s;
@@ -81,10 +81,10 @@
     }
 
     .sub-menu {
-      @media (max-width: $screen-sm-min) {
+      @media (max-width: $ipad) {
         display: none;
       }
-      @media (min-width: $screen-sm-min) {
+      @media (min-width: $ipad) {
         position: absolute;
         left: 0;
         padding: 0;
