@@ -60,7 +60,6 @@
       text-align: center;
     }
 
-
     p {
       margin: 0;
     }
@@ -70,15 +69,4 @@
   min-height: 50px;
   max-height: 50px;
   height: 50px!important;
-}
-
-@media all and (max-width: 320px) {
-  .footer-email {
-    span {
-      display: none;
-    }
-    &:after {
-      content: 'Email us';
-    }
-  }
 }

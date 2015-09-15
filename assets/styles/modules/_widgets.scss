@@ -54,44 +54,48 @@
   }
   &.text-3 {
     .textwidget {
-      position: relative;
-      padding-left: 25px;
 
-      &:after,
-      &:before {
-        position: absolute;
-        font-family: $font-face-fontAwesome;
-        left: 0;
+      .mobile-text {
+        display: none;
       }
 
-      &:before {
-        content: '\f041';
-        top: 0;
-      }
-      &:after {
-        content: '\f095';
-        top: 63px;
-      }
-      @media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
-        a {
-          span {
-            visibility: hidden;
-
-            &:before {
-              position: absolute;
-              visibility: visible;
-              content: 'Email us';
-            }
+      @media all and (max-width: 930px) {
+        .footer-email {
+          .email-address {
+            display: none;
+          }
+          .mobile-text {
+            display: inline-block;
           }
         }
       }
       p {
+        position: relative;
+        padding-left: 25px;
+
         &:before {
-          content: '\f0e0';
-          font-family: $font-face-fontAwesome;
           position: absolute;
+          font-family: $font-face-fontAwesome;
+          top: 0;
           left: 0;
-          bottom: 0;
+        }
+        // Address
+        &:first-child {
+          &:before {
+            content: '\f041';
+          }
+        }
+        // Telephone
+        &:nth-child(2) {
+          &:before {
+            content: '\f095';
+          }
+        }
+        // Email
+        &:nth-child(3) {
+          &:before {
+            content: '\f0e0';
+          }
         }
       }
     }
