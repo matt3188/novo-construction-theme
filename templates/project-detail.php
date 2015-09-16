@@ -20,6 +20,7 @@ $tags = array_filter(explode(',', $data));
   <h1 style="text-align: center;">Project Coming Soon</h1>
   <h2 style="text-align: center;">This project is under development, check back soon.</h2>
 <?php } else { ?>
+  <a class="btn btn-text" href="/projects"><i class="fa fa-angle-left"></i> Back to project list</a>
   <div class="project project-gallery">
     <div class="cycle-slideshow-gallery">
       <button class="btn controls prev"><i class="fa fa-angle-left"></i></button>
